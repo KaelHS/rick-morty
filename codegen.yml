@@ -1,0 +1,13 @@
+schema: https://rickandmortyapi.com/graphql
+# schema: http://ec2-15-228-244-109.sa-east-1.compute.amazonaws.com:4000
+documents:
+  - 'src/graphql/mutations/*.ts'
+  - 'src/graphql/queries/*.ts'
+generates:
+  ./src/graphql/generated/types.ts:
+    plugins:
+    - typescript
+    - typescript-operations
+hooks:
+  afterOneFileWrite:
+    - eslint --fix
