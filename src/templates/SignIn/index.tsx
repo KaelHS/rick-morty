@@ -2,7 +2,7 @@
 import { Input } from '@/components/Input'
 import { useAuth } from '@/context/FakeAuthContext'
 import { useState } from 'react'
-
+ 
 export const SignIn = () => {
   const { signIn } = useAuth();
   const [ name, setName ] = useState<string>('');
